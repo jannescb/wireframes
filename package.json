@@ -1,0 +1,52 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "^0.25",
+        "browser-sync": "^2.27.10",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "@floating-ui/dom": "^0.5.2",
+        "@headlessui/vue": "^1.6.4",
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-vue3": "^0.6.0",
+        "@inertiajs/progress": "^0.2.7",
+        "@macramejs/admin-config": "^0.2.8",
+        "@macramejs/admin-vue3": "^0.2.8",
+        "@macramejs/macrame": "^0.2.6",
+        "@macramejs/macrame-vue3": "^0.2.6",
+        "@macramejs/page-builder-vue3": "^0.0.8",
+        "@tiptap/extension-bold": "^2.0.0-beta.26",
+        "@tiptap/extension-code": "^2.0.0-beta.26",
+        "@tiptap/extension-italic": "^2.0.0-beta.26",
+        "@tiptap/extension-link": "^2.0.0-beta.38",
+        "@tiptap/extension-table": "^2.0.0-beta.49",
+        "@tiptap/extension-table-cell": "^2.0.0-beta.20",
+        "@tiptap/extension-table-header": "^2.0.0-beta.22",
+        "@tiptap/extension-table-row": "^2.0.0-beta.19",
+        "@tiptap/extension-underline": "^2.0.0-beta.23",
+        "@tiptap/starter-kit": "^2.0.0-beta.185",
+        "@tiptap/vue-3": "^2.0.0-beta.91",
+        "lodash.merge": "^4.6.2",
+        "tailwindcss": "^3.0.24",
+        "ts-loader": "^9.3.0",
+        "typescript": "^4.7.2",
+        "v-calendar": "^3.0.0-alpha.8",
+        "vue": "^3.2.36",
+        "vue-loader": "^17.0.0",
+        "vue3-dropzone": "^0.0.7",
+        "vue3-popper": "^1.5.0"
+    }
+}
