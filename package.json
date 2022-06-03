@@ -39,6 +39,8 @@
         "@tiptap/extension-underline": "^2.0.0-beta.23",
         "@tiptap/starter-kit": "^2.0.0-beta.185",
         "@tiptap/vue-3": "^2.0.0-beta.91",
+        "embla-carousel": "^6.2.0",
+        "lazysizes": "^5.3.2",
         "lodash.merge": "^4.6.2",
         "tailwindcss": "^3.0.24",
         "ts-loader": "^9.3.0",
