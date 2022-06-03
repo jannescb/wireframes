@@ -18,6 +18,7 @@ class PageContent extends ContentCast
         'carousel'   => Parsers\CarouselParser::class,
         'info_box'   => Parsers\InfoBoxParser::class,
         'cards'      => Parsers\CardsParser::class,
+        'block'      => Parsers\BlockParser::class,
     ];
 
     /**

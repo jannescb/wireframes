@@ -25,11 +25,6 @@
                 <DrawerCarousel :draws="SectionCarousel" />
             </Cabinet>
         </DrawerSection>
-        <DrawerSection title="Blöcke">
-            <Cabinet>
-                <DrawerBlocks :draws="SectionBlocks" />
-            </Cabinet>
-        </DrawerSection>
     </ContentSidebar>
 </template>
 
@@ -44,8 +39,8 @@ import {
     SectionCards,
     SectionAccordion,
     SectionLogoWall,
-    SectionBlocks,
-} from './content/sections';
+} from '../../Page/components/content/sections';
+
 import {
     DrawerTextFull,
     DrawerCarousel,
@@ -56,8 +51,7 @@ import {
     DrawerCards,
     DrawerAccordion,
     DrawerLogoWall,
-    DrawerBlocks,
-} from './content/drawers';
+} from '../../Page/components/content/drawers';
 import { DrawerSection, ContentSidebar } from '@macramejs/admin-vue3';
 import { Cabinet } from '@macramejs/macrame-vue3';
 import { ref } from 'vue';

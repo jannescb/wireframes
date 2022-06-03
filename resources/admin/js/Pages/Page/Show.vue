@@ -17,9 +17,6 @@
                         />
                         <PanelContentSidebar />
                     </Content>
-                    <!-- <template v-slot:sidebar>
-                        
-                    </template> -->
                 </TabPanel>
                 <TabPanel>
                     <PanelMetaBody
@@ -55,7 +52,11 @@ import { TabGroup, TabList, Tab, Content } from '@macramejs/admin-vue3';
 import { TabPanels, TabPanel } from '@headlessui/vue';
 import BaseLayout from './Index.vue';
 import { saveQueue } from '@admin/modules/save-queue';
-import { PageResource, LinkOption } from '@admin/types/resources';
+import {
+    PageResource,
+    LinkOption,
+    BlockCollectionResource,
+} from '@admin/types/resources';
 import { PageContent, PageMeta } from '@admin/types/forms';
 import PanelMetaBody from './components/PanelMetaBody.vue';
 import PanelContentBody from './components/PanelContentBody.vue';
@@ -63,6 +64,7 @@ import PanelContentSidebar from './components/PanelContentSidebar.vue';
 import EditSlugModal from './components/EditSlugModal.vue';
 import PanelSettingsBody from './components/PanelSettingsBody.vue';
 import { linkOptions as GlobalLinkOptions } from '@admin/modules/links';
+import { blocks as GlobalBlocks } from '@admin/modules/blocks';
 
 const tabs = ['content', 'meta', 'settings'];
 
@@ -80,10 +82,15 @@ const props = defineProps({
         required: true,
         type: Array as PropType<LinkOption[]>,
     },
+    blocks: {
+        required: true,
+        type: Object as PropType<BlockCollectionResource>,
+    },
 });
 
 onBeforeMount(() => {
     GlobalLinkOptions.value = props.linkOptions;
+    GlobalBlocks.value = props.blocks;
 });
 
 const contentFormQueueKey = `page.${props.page.data.id}.content`;

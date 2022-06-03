@@ -7,6 +7,7 @@ export { default as SectionCards } from './SectionCards.vue';
 export { default as SectionAccordion } from './SectionAccordion.vue';
 export { default as SectionLogoWall } from './SectionLogoWall.vue';
 export { default as SectionCarousel } from './SectionCarousel.vue';
+export { default as SectionBlocks } from './SectionBlocks.vue';
 
 import SectionTextFull from './SectionTextFull.vue';
 import SectionTextImage from './SectionTextImage.vue';
@@ -17,6 +18,7 @@ import SectionCards from './SectionCards.vue';
 import SectionAccordion from './SectionAccordion.vue';
 import SectionLogoWall from './SectionLogoWall.vue';
 import SectionCarousel from './SectionCarousel.vue';
+import SectionBlocks from './SectionBlocks.vue';
 
 const sections = {
     text_full: SectionTextFull,
@@ -28,6 +30,7 @@ const sections = {
     text_image: SectionTextImage,
     accordion: SectionAccordion,
     logo_wall: SectionLogoWall,
+    block: SectionBlocks,
 };
 
 export { sections };

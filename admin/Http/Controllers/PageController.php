@@ -4,10 +4,12 @@ namespace Admin\Http\Controllers;
 
 use Admin\Http\Controllers\Traits\PageLinks;
 use Admin\Http\Indexes\PageIndex;
+use Admin\Http\Resources\BlockResource;
 use Admin\Http\Resources\LinkOptionResource;
 use Admin\Http\Resources\PageResource;
 use Admin\Http\Resources\PageTreeResource;
 use Admin\Ui\Page as AdminPage;
+use App\Models\Block;
 use App\Models\Page;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -60,6 +62,7 @@ class PageController
         }
 
         $pages = Page::root();
+        $blocks = Block::all();
 
         $linkOptions = $this->linkOptions();
 
@@ -68,6 +71,7 @@ class PageController
             ->with('tab', $tab)
             ->with('page', new PageResource($page))
             ->with('link-options', LinkOptionResource::collection($linkOptions))
+            ->with('blocks', BlockResource::collection($blocks))
             ->with('pages', PageTreeResource::collection($pages));
     }
 

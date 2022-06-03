@@ -13,7 +13,6 @@
             </h1>
         </div>
         <Repeatables :repeatables="page.content" />
-        <pre>{{ page.content }}</pre>
     </main>
     <Footer />
 </template>

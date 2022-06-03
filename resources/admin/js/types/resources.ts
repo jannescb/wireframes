@@ -84,3 +84,14 @@ export type LinkOption = {
 }
 export type LinkOptionResource = Resource<LinkOption>;
 export type LinkOptionCollectionResource = CollectionResource<LinkOption>;
+
+
+// Block
+export type Block = {
+    id?: number;
+    content: { [key: string]: any };
+    name: string;
+};
+
+export type BlockResource = Resource<Block>;
+export type BlockCollectionResource = CollectionResource<Block>;

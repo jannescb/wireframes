@@ -21,3 +21,12 @@ export type PageMeta = {
     description: string
 }
 export type PageMetaForm = Form<PageMeta>;
+
+
+// Block
+
+export type BlockContent = {
+    name: string,
+    content: {[k:string]: any}[],
+}
+export type BlockContentForm = Form<BlockContent>;

@@ -3,22 +3,22 @@
 use Admin\Http\Controllers\Auth\AuthenticatedSessionController;
 use Admin\Http\Controllers\Auth\NewPasswordController;
 use Admin\Http\Controllers\Auth\PasswordResetLinkController;
+use Admin\Http\Controllers\BlockController;
 use Admin\Http\Controllers\HomeController;
-use Admin\Http\Controllers\UserProfileController;
-use Admin\Http\Controllers\UserController;
-use Admin\Http\Controllers\SettingController;
-use Admin\Http\Middleware\AuthenticateAdmin;
 use Admin\Http\Controllers\MediaCollectionController;
 use Admin\Http\Controllers\MediaController;
-use Admin\Http\Controllers\PageController;
 use Admin\Http\Controllers\NavController;
+use Admin\Http\Controllers\PageController;
+use Admin\Http\Controllers\SettingController;
+use Admin\Http\Controllers\UserController;
+use Admin\Http\Controllers\UserProfileController;
+use Admin\Http\Middleware\AuthenticateAdmin;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
     'middleware' => AuthenticateAdmin::class,
 ], function () {
     Route::get('/', [HomeController::class, 'show']);
-
 
     // Settings
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
@@ -33,7 +33,6 @@ Route::group([
     Route::post('/user/profile/password', [UserProfileController::class, 'updatePassword'])->name('user.profile.password');
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
-
 
     // media
     Route::get('/media', [MediaController::class, 'index'])->name('media.index');
@@ -68,6 +67,13 @@ Route::group([
     Route::put('/nav/{type}/{item}', [NavController::class, 'update'])->name('nav.update');
     Route::post('/nav/{type}/order', [NavController::class, 'order'])->name('nav.order');
     Route::delete('/nav/{type}/{item}', [NavController::class, 'destroy'])->name('nav.item.delete');
+
+    // blocks
+    Route::get('/blocks', [BlockController::class, 'index'])->name('blocks.index');
+    Route::post('/blocks', [BlockController::class, 'store'])->name('blocks.store');
+    Route::get('/blocks/items', [BlockController::class, 'items'])->name('blocks.items');
+    Route::get('/blocks/{block}', [BlockController::class, 'show'])->name('blocks.show');
+    Route::put('/blocks/{block}', [BlockController::class, 'update'])->name('blocks.update');
 });
 
 Route::group([

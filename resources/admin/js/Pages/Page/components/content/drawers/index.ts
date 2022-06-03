@@ -9,3 +9,5 @@ export { default as DrawerCards } from './DrawerCards.vue';
 export { default as DrawerCarousel } from './DrawerCarousel.vue';
 export { default as DrawerAccordion } from './DrawerAccordion.vue';
 export { default as DrawerLogoWall } from './DrawerLogoWall.vue';
+
+export { default as DrawerBlocks } from './DrawerBlocks.vue';
